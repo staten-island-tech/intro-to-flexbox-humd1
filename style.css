@@ -1,0 +1,45 @@
+html,
+body,
+* {
+  font-size: 30px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+.fredoka {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.card{
+    background-color: black;
+    margin: 10px;
+    width: 30%;
+    height: 30vw;
+    color: white;
+    font-family: 'Fredoka';
+    text-align: center;
+}
+
+.card h4{
+    
+}
+
+.container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    text-align: center;
+    color:white;
+    margin-bottom: 20px;
+    background-color: black;
+}
