@@ -8,7 +8,7 @@ body,
 }
 
 body{
-    background-color: rgb(208, 238, 193);
+    background-color: rgba(208, 238, 193, 0.592);
 }
 
 .fredoka {
@@ -34,6 +34,9 @@ body{
     border-radius: 30px;
     box-shadow: rgba(165, 165, 165, 0.512) 10px -16px;
     align-items: center;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .container{
@@ -88,8 +91,14 @@ body{
     font-family: "Fredoka";
     box-shadow: rgba(165, 165, 165, 0.512) 3px -5px;
     border-radius: 10px;
-    border-color:rgb(92, 103, 86);
+    border: 2px solid rgb(92, 103, 86);
     margin-top: 30px;
+    transition: all 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background-color:  rgb(127, 144, 118);
 }
 
 .checkoutbutton{
@@ -104,7 +113,7 @@ body{
 .image{
     width:30px;
     border-radius:10px;
-    
+
 }
 
 @media screen and (max-width: 600px) {
@@ -116,3 +125,5 @@ body{
         flex-direction: column;
     }
 }
+
+
