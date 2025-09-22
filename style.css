@@ -27,16 +27,31 @@ body{
     margin: 10px;
     margin-bottom: 30px;
     width: 20%;
-    height: 20vw;
+    height: 30vw;
     color: rgb(125, 125, 125);
     font-family: 'Fredoka';
     text-align: center;
     border-radius: 30px;
     box-shadow: rgba(165, 165, 165, 0.512) 10px -16px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    height: 200px;
+    margin: 10px ;
+}
+
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+}
+
+.card p{
+    font-style: italic;
+    font-size:20px;
 }
 
 .container{
@@ -70,6 +85,11 @@ body{
 .header h2{
     font-family: 'Fredoka';
     font-size: 30px;
+}
+
+.header h3{
+    font-family: 'Fredoka';
+    font-size: 15px;
 }
 
 .checkout{
@@ -110,16 +130,12 @@ button:hover{
     border-color:rgb(92, 103, 86);
 }
 
-.image{
-    width:30px;
-    border-radius:10px;
-
-}
 
 @media screen and (max-width: 600px) {
     .card {
         width: 100%;
         height: 100%;
+        margin-right: 30px;
     }
     .container {
         flex-direction: column;
