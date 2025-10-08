@@ -66,13 +66,29 @@ body{
 .header{
     text-align: center;
     color:rgb(125, 125, 125);
-    margin-bottom: 100px;
     background-color: rgb(255, 255, 255);
     line-height: 60px;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 40px;
+    margin-bottom: 20px;
     border-radius: 30px;
+}
+
+.search{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filterbutton{
+    background-color: rgb(142, 161, 132);
+    color: #fff;
+    font-family: "Fredoka";
+    box-shadow: rgba(165, 165, 165, 0.512) 3px -5px;
+    border-radius: 30px;
+    border-color:rgb(92, 103, 86);
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .header h1{
