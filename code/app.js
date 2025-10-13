@@ -119,4 +119,44 @@ const products = [
     alt: "GAP Jeans",
     category: "pants"
   },
+  {
+    name: "H&M Flannel",
+    description: "Closet of a middle aged dad",
+    price: "$20.00",
+    img: "flannel.PNG",
+    alt: "H&M Flannel",
+    category: "tops"
+  },
+  {
+    name: "Nike AF1s",
+    description: "First good pair of shoes",
+    price: "$115.00",
+    img: "af1.PNG",
+    alt: "Nike AF1s",
+    category: "shoes"
+  },
+  {
+    name: "New Balance 550s",
+    description: "Makes a cool sound",
+    price: "$110.00",
+    img: "550.PNG",
+    alt: "New Balance 550s",
+    category: "shoes"
+  },
+  {
+    name: "H&M Joggers",
+    description: "At home pants",
+    price: "$17.00",
+    img: "joggers.PNG",
+    alt: "H&M Joggers",
+    category: "pants"
+  },
+  {
+    name: "Amazon Gold Studs Earrings",
+    description: "Some random earrings idk",
+    price: "$13.00",
+    img: "studs.PNG",
+    alt: "Amazon Gold Studs Earrings",
+    category: "jewelry"
+  },
 ];
