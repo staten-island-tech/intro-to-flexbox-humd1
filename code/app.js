@@ -160,3 +160,23 @@ const products = [
     category: "jewelry"
   },
 ];
+
+
+const container = document.querySelector(".container");
+
+function add(product) {
+  container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="card">
+      <h2>${product.name}</h2>
+      <div class="image">
+      <img src="${product.img}" alt="${product.alt}"/>
+      </div>
+      <p>"${product.description}"</p>
+      <h4>price: ${product.price}</h4>
+      <button class="button">buy!</button>
+    </div>`
+  );
+}
+
+products.forEach(product => add(product));
