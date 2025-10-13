@@ -174,7 +174,7 @@ function add(product) {
       </div>
       <p>"${product.description}"</p>
       <h4>price: ${product.price}</h4>
-      <button class="button">buy!</button>
+      <button class="cartbutton" value=${product.name}>buy!</button>
     </div>`
   );
 }
@@ -191,13 +191,34 @@ filterButtons.forEach(button => {
     });
 });
 
-let cart = [];
-const buttons = document.querySelectorAll(".button");
-
-
-buttons.forEach((button, index) => {
+const cart = [];
+const buttons = document.querySelectorAll(".cartbutton");
+buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        cart.push(products[index]);
-        console.log(cart);
+        cart.push(button.value);
+        addToCheckout(button.value)
+        //console.log(cart);
     });
-});  
+});
+
+const checkout = document.querySelector(".checkout");
+
+function addToCheckout( _productname) {
+    alert (_productname);
+const _product = products.find(p => p.name === _productname);           
+alert(_product);
+checkout.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="card">
+      <h2>${_product.name}</h2>
+      <div class="image">
+      <img src="${_product.img}" alt="${_product.alt}"/>
+      </div>
+      <p>"${_product.description}"</p>
+      <h4>price: ${_product.price}</h4>
+    </div>`
+);
+}
+
+//cart.forEach (product => addToCheckout(product));
+
