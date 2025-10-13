@@ -180,3 +180,14 @@ function add(product) {
 }
 
 products.forEach(product => add(product));
+
+const filterButtons = document.querySelectorAll(".filterbutton");
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const category = button.dataset.category;
+        container.innerHTML = "";
+        const filteredProducts = products.filter(product => product.category === category || category === "ALL");
+        filteredProducts.forEach(product => add(product));
+    });
+});
+
