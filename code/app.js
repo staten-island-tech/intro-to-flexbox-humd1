@@ -191,3 +191,13 @@ filterButtons.forEach(button => {
     });
 });
 
+let cart = [];
+const buttons = document.querySelectorAll(".button");
+
+
+buttons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        cart.push(products[index]);
+        console.log(cart);
+    });
+});  
