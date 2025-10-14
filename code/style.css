@@ -124,15 +124,12 @@ body{
 .checkout{
     text-align: center;
     padding: 10px;
-    line-height: 200px;
     font-family: "Fredoka";
-    letter-spacing: 3px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     margin: 20px;
     color: rgb(125, 125, 125);
 }
-
 
 .button{
     background-color: rgb(142, 161, 132);
@@ -157,8 +154,30 @@ button:hover{
     box-shadow: rgba(165, 165, 165, 0.512) 3px -5px;
     border-radius: 10px;
     border-color:rgb(92, 103, 86);
+    margin-bottom: 20px;
 }
 
+.confirmation{
+    margin-top: 20px;
+    background-color: rgb(142, 161, 132);
+    color: #fff;
+    font-family: "Fredoka";
+    box-shadow: rgba(165, 165, 165, 0.512) 3px -5px;
+    border-radius: 10px;
+    border-color:rgb(92, 103, 86);
+}
+
+
+.yourcart{
+    line-height: 50px;
+    letter-spacing: 3px;
+    text-wrap: wrap;
+}
+
+.yourtotal{
+    line-height: 200px;
+    letter-spacing: 3px;
+}
 
 @media screen and (max-width: 600px) {
     .card {

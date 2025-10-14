@@ -2,7 +2,7 @@ const products = [
   {
     name: "Uniqlo Parka",
     description: "The Favorite Jacket",
-    price: "$49.90",
+    price: "49.90",
     img: "jacket.PNG",
     alt: "Uniqlo Parka",
     category: "tops"
@@ -10,7 +10,7 @@ const products = [
   {
     name: "New Balance 530s",
     description: "The Most Used Shoe",
-    price: "$109.99",
+    price: "109.99",
     img: "shoe.PNG",
     alt: "New Balance 530s",
     category: "shoes"
@@ -18,7 +18,7 @@ const products = [
   {
     name: "Aeropostale Shirts",
     description: "The go-to home shirt",
-    price: "$32.95",
+    price: "32.95",
     img: "aero.PNG",
     alt: "Aeropostale Shirt",
     category: "tops"
@@ -26,7 +26,7 @@ const products = [
   {
     name: "Uniqlo AIRISM Shirts",
     description: "Home shirt part 2",
-    price: "$19.90",
+    price: "19.90",
     img: "uniqlo.PNG",
     alt: "Uniqlo AIRISM Shirt",
     category: "tops"
@@ -34,7 +34,7 @@ const products = [
   {
     name: "Michael Kors Purse",
     description: "Because women don't get good pockets",
-    price: "$118.50",
+    price: "118.50",
     img: "purse.PNG",
     alt: "Michael Kors Purse",
     category: "bags"
@@ -42,7 +42,7 @@ const products = [
   {
     name: "Cool Chain",
     description: "My mom got this for free somehow",
-    price: "$59.00",
+    price: "59.00",
     img: "chain.PNG",
     alt: "Cool Chain",
     category: "jewelry"
@@ -50,7 +50,7 @@ const products = [
   {
     name: "Hijab",
     description: "Nothing but black",
-    price: "$20.00",
+    price: "20.00",
     img: "hijab.jpg",
     alt: "Hijab",
     category: "tops"
@@ -58,7 +58,7 @@ const products = [
   {
     name: "Kate Spade Heart Earrings",
     description: "I lost the other ones",
-    price: "$35.00",
+    price: "35.00",
     img: "heartearrings.PNG",
     alt: "Kate Spade Heart Earrings",
     category: "jewelry"
@@ -66,7 +66,7 @@ const products = [
   {
     name: "Kate Spade Huggies",
     description: "Only real gold",
-    price: "$38.00",
+    price: "38.00",
     img: "earrings.PNG",
     alt: "Kate Spade Huggies",
     category: "jewelry"
@@ -74,7 +74,7 @@ const products = [
   {
     name: "Jansport Backpack",
     description: "Pain in the back",
-    price: "$44.00",
+    price: "44.00",
     img: "bag.png",
     alt: "Jansport Backpack",
     category: "bags"
@@ -82,7 +82,7 @@ const products = [
   {
     name: "Hoodie",
     description: "Comes off after first period",
-    price: "$30.00",
+    price: "30.00",
     img: "hoodie.PNG",
     alt: "Hoodie",
     category: "tops"
@@ -90,7 +90,7 @@ const products = [
   {
     name: "Name Chain",
     description: "Somehow every brown person has one",
-    price: "$65.00",
+    price: "65.00",
     img: "name.PNG",
     alt: "Name Chain",
     category: "jewelry"
@@ -98,7 +98,7 @@ const products = [
   {
     name: "Old Navy Jeans",
     description: "An outfit repeater's dream",
-    price: "$40.00",
+    price: "40.00",
     img: "jeans.PNG",
     alt: "Old Navy Jeans",
     category: "pants"
@@ -106,7 +106,7 @@ const products = [
   {
     name: "Guess Bag",
     description: "The retired purse",
-    price: "$50.00",
+    price: "50.00",
     img: "retiredbag.PNG",
     alt: "Guess Bag",
     category: "bags"
@@ -114,7 +114,7 @@ const products = [
   {
     name: "GAP Cargo Jeans",
     description: "Woah pockets",
-    price: "$44.00",
+    price: "44.00",
     img: "gapjeans.PNG",
     alt: "GAP Jeans",
     category: "pants"
@@ -122,7 +122,7 @@ const products = [
   {
     name: "H&M Flannel",
     description: "Closet of a middle aged dad",
-    price: "$20.00",
+    price: "20.00",
     img: "flannel.PNG",
     alt: "H&M Flannel",
     category: "tops"
@@ -130,7 +130,7 @@ const products = [
   {
     name: "Nike AF1s",
     description: "First good pair of shoes",
-    price: "$115.00",
+    price: "115.00",
     img: "af1.PNG",
     alt: "Nike AF1s",
     category: "shoes"
@@ -138,7 +138,7 @@ const products = [
   {
     name: "New Balance 550s",
     description: "Makes a cool sound",
-    price: "$110.00",
+    price: "110.00",
     img: "550.PNG",
     alt: "New Balance 550s",
     category: "shoes"
@@ -146,7 +146,7 @@ const products = [
   {
     name: "H&M Joggers",
     description: "At home pants",
-    price: "$17.00",
+    price: "17.00",
     img: "joggers.PNG",
     alt: "H&M Joggers",
     category: "pants"
@@ -154,7 +154,7 @@ const products = [
   {
     name: "Amazon Gold Studs Earrings",
     description: "Some random earrings idk",
-    price: "$13.00",
+    price: "13.00",
     img: "studs.PNG",
     alt: "Amazon Gold Studs Earrings",
     category: "jewelry"
@@ -193,27 +193,46 @@ buttonfilter.forEach(button => {
 
 const cart = [];
 const checkout = document.querySelector(".checkout");
-const cartbox = document.querySelector(".yourcart");
-container.addEventListener("click", (e) => {
-    if (e.target.className === "button") {
-        const name = e.target.parentNode.querySelector("h2").innerText;
-        const price = e.target.parentNode.querySelector("h4").innerText;
-        const item = {name, price};
-        cart.push(item);
+const yourcart = document.querySelector(".yourcart");
+container.addEventListener("click", (event) => {
+    if (event.target.classList.contains("button")) {
+        const card = event.target.closest(".card");
+        const name = card.querySelector("h2").textContent;
+        const product = products.find(product => product.name === name);
+        cart.push(product);
         console.log(cart);
-        cartbox.innerHTML += `<p>${item.name} - ${item.price}</p>`;
+        yourcart.insertAdjacentHTML(
+            "beforeend",
+            `<div class="yourcart">
+            <h3>${product.name} - $${product.price}</h3>
+            </div>`
+        );
     }
-}); 
+});
 
-
+let total = 0;
 const checkoutbutton = document.querySelector(".checkoutbutton");
+const yourtotal = document.querySelector(".yourtotal");
 checkoutbutton.addEventListener("click", () => {
     if (cart.length === 0) {
-        alert("Your cart is empty!");
-    } else {
-        alert("Thank you for your purchase!");
-
-        cart.length = 0;
-        cartbox.innerHTML = "";
-    }              
+      alert("There is nothing in your cart!");
+    }
+    else{
+      cart.forEach(item => {
+        const price = parseFloat(item.price);
+        total += price;
+        console.log(total)
+        yourtotal.innerHTML = `<h3>Your total is $${total.toFixed(2)}</h3>`
+      });
+    }
+  });
+    
+const confirmation = document.querySelector(".confirmation");
+confirmation.addEventListener("click", () => {
+  if (cart.length === 0) {
+      alert("There is nothing in your cart!");
+    }
+    else{
+      alert("Thank you!");
+    }
 });
