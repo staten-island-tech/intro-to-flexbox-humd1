@@ -2,7 +2,7 @@ const products = [
   {
     name: "Uniqlo Parka",
     description: "The Favorite Jacket",
-    price: "$49.90",
+    price: $49.90,
     img: "jacket.PNG",
     alt: "Uniqlo Parka",
     category: "tops"
@@ -192,3 +192,34 @@ buttonfilter.forEach(button => {
 });
 
 const cart = [];
+const cartbox = document.querySelector(".cartbox");
+container.addEventListener("click", (event) => {
+    if (event.target.classList.contains("button")) {
+        const card = event.target.closest(".card");
+        const name = card.querySelector("h2").textContent;
+        const product = products.find(product => product.name === name);
+        cart.push(product);
+        console.log(cart);
+        cartbox.insertAdjacentHTML(
+            "beforeend",
+            `<div class="cartitem">
+            <h3>${product.name}</h3>
+            <h4>${product.price}</h4>
+            </div>`
+        );
+    }
+});
+
+/* 
+const checkoutbutton = document.querySelector(".checkoutbutton");
+checkoutbutton.addEventListener("click", () => {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+    } else {
+        alert("Thank you for your purchase!");
+
+        cart.length = 0;
+        cartbox.innerHTML = "";
+    }              
+});
+ */
